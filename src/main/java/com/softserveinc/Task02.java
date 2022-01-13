@@ -31,8 +31,27 @@ import java.util.Scanner;
  */
 public class Task02 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
-
+        Scanner sc = new Scanner(System.in);
+        double firstTemperatureC;
+        double lastTemperatureC;
+        double temperatureF;
+        double step;
+        System.out.print("t1 >>> ");
+        firstTemperatureC = sc.nextDouble();
+        System.out.print("t2 >>> ");
+        lastTemperatureC = sc.nextDouble();
+        System.out.print("dt >>> ");
+        step = sc.nextDouble();
+        System.out.println("-----------------");
+        System.out.println("C       F");
+        System.out.println("-----------------");
+        while (firstTemperatureC<=lastTemperatureC){
+            temperatureF = firstTemperatureC * 9/5 + 32;
+            System.out.printf("%.2f",firstTemperatureC);
+            System.out.print("    ");
+            System.out.printf("%.2f\n",temperatureF);
+            firstTemperatureC += step;
+        }
+        System.out.println("-----------------");
     }
 }
